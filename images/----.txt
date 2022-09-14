@@ -1,0 +1,3 @@
+labelside1
+labelside2
+labelsticker

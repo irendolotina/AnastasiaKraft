@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="devices.css">
+    <title>Psychologist - Sexologist Anastasia Kraft</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="modernizr-custom.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+           <div class="laneleft"></div>
+           <div class="laneright"></div>
+       <div class="wrapper_content">
+          <div class="header">
+            <div id="header__nav">
+              <nav>
+                <div id="site_nav">
+                    <li><a class="sn" href="#">site navigation</a>
+                        <ul id="spisok">
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Rewiews</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">About me</a></li>
+                            <li><a href="#">Session request</a></li>
+                            <li><a class="reg" href="#">Register</a></li>
+                          </ul>
+                    </li>
+                </div>
+              </nav>
+            </div>
+            <div class="logo"></div>
+          </div>
+          <div class="main">
+            <div id="insertstop">
+
+                <a href="#" class="insertstop1">Price</a>
+
+                <a href="#" class="insertstop2">Contacts</a>
+
+                <a href="#" class="insertstop3">FAQ</a>
+
+                <a href="#" class="insertstop4">Reviews</a>
+
+            </div>
+
+            <div class="folder"></div>
+
+       </div>
+
+       <div id="insertsright">
+
+
+        <a href="#" class="insertsright1">About me</a>
+
+
+       <a href="#" class="insertsright2">Session request</a>
+
+       <a href="#" class="insertsright3"><span>register</span></a>
+
+ </div>
+
+  </div>
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#site_nav li a').on('click', function(e){
+        e.preventDefault();
+      });
+        
+      $('#header__nav').hover(function () {
+         clearTimeout($.data(this,'timer'));
+         $('#spisok',this).stop(true,true).slideDown(200);
+      }, function () {
+        $.data(this,'timer', setTimeout($.proxy(function() {
+          $('#spisok',this).stop(true,true).slideUp(50);
+        }, this), 100));
+      });
+    
+    });
+    </script>
+
+</body>
+</html>
